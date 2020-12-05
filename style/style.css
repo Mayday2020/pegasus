@@ -10,18 +10,79 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
+.header {
+    max-width: 1280px;
+    margin: 5px auto -5px;
+    display: flex;
+    justify-content: center;
+    
+}
+.header_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+    margin: 0 1.5%;
+}
+.header_item-number {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+.head_number {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+
+}
+.head_number-info {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #DEAC8C;
+
+}
+.header_item-btn {
+    display: flex;
+}
+.header_item-btn a {
+    box-sizing: border-box;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    
+}
+.first_btn a {
+    letter-spacing: 1px;
+    padding: 6px 34px;
+    border: 1px solid #000000;
+}
+.second_btn a {
+    color: #ffffff;
+    background-color: #DEAC8C;
+    padding: 7px 37px;
+}
 .nav {
     background-color: #42373C;
 }
 nav ul {
-    display: flex;
-    justify-content: space-around;
-    max-width: 1280px;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*max-width: 1280px;*/
     margin: 0 auto;
     padding: 21px 0;
+    
+    text-align: center;
 }
 nav ul li{
     display: inline-block;
+    margin: 0 auto;
+}
+nav li + li::before {
+    content: url(../image/icons/Фигура-1-копия-3.png);
+    position: relative;
+    top: 4px;
+    margin: 0 67px;
+    opacity: 0.5;
 }
 .nav a {
     font-family: 'Romul', serif;
@@ -29,11 +90,6 @@ nav ul li{
 }
 a {
     text-decoration: none;
-}
-nav li:not(:last-child):after {
-    content: ' ';
-    color: #ffffff;
-    width: 100%;
 }
 .crumbs ul {
     display: flex;
@@ -44,7 +100,6 @@ nav li:not(:last-child):after {
 }
 .crumbs ul li {
     display: inline-block;
-    padding: 0 10px;
     letter-spacing: 1px;
 
 }
@@ -52,6 +107,10 @@ nav li:not(:last-child):after {
     color: #000000;
     font-size: 10px;
     text-transform: uppercase;
+}
+.crumbs li + li::before {
+    content: "|";
+    padding: 0 6px;
 }
 .crumbs .active {
     color: #DEAC8C;
@@ -73,6 +132,7 @@ nav li:not(:last-child):after {
     margin-top: 5px;
     letter-spacing: 0.5px;
 }
+
 .excursions h3 {
     font-size: 17px;
     font-weight: normal;
