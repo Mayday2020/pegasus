@@ -164,12 +164,28 @@ footer {
     padding-top: 36px;
 }
 .footer_item {
-    flex-basis: 23%;
+    flex-basis: 22%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 15px;
+}
+.footer_item:last-child {
+    margin-right: 6px;
+}
+.footer_item a {
+    margin-bottom: 14px;
+    color: rgb(206, 206, 206);
     
 }
+.footer_item-btn {
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 16px 6px;
+    border-bottom: 2px solid #ffffff;
+}
+
 .footer_item h3 {
     font-weight: normal;
     font-family: 'Romul';
@@ -178,6 +194,7 @@ footer {
 }
 .footer_item-list{
     margin-top: 47px;
+    font-size: 15px;
 }
 .footer_item-list ul {
     list-style-type: none;
@@ -191,6 +208,44 @@ footer {
 .contacts {
     display: flex;
     flex-direction: column;
+    color: #ffffff;
+    background-color: #3E3E3E;
+    padding: 10px 18px 0;
+    
+    text-align: right;
+}
+.contacts_number {
+    font-size: 17px;
+    margin-bottom: 2px;
+}
+.contacts_info {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    color: rgb(167, 167, 167);
+}
+.social {
+    text-align: center;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.facebook {
+    content: url(../image/icons/facebook.png);
+    width: 28px;
+}
+.instagram {
+    content: url(../image/icons/insta3.png);
+    width: 28px;
+}
+.linkedin {
+    content: url(../image/icons/linkedin.png);
+    width: 28px;
+}
+.gmail {
+    content: url(../image/icons/gmail.png);
+    width: 28px;
 }
 .footer_rights {
     max-width: 1280px;
