@@ -18,7 +18,6 @@ body {
     margin: 5px auto -5px;
     display: flex;
     justify-content: center;
-    position: relative;
     
 }
 .header::before {
@@ -89,12 +88,8 @@ body {
     background-color: #42373C;
 }
 nav ul {
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*max-width: 1280px;*/
     margin: 0 auto;
     padding: 21px 0;
-    
     text-align: center;
 }
 nav ul li{
@@ -221,7 +216,7 @@ a:hover {
     background: url(../image/image5.jpg) no-repeat center;
 }
 .item_image-6 {
-    background: url(../image/image6.jpg) no-repeat bottom;
+    background: url(../image/image6.jpg) no-repeat bottom / 100%;
 }
 .item_info {
     margin-top: 21px;
@@ -312,6 +307,10 @@ footer {
     padding: 0 16px 6px;
     border-bottom: 2px solid #ffffff;
 }
+.footer_item-btns {
+    display: flex;
+    flex-direction: column;
+}
 .footer_item-btn:hover {
     color: #ffffff;
 }
@@ -385,19 +384,143 @@ footer {
     margin: 0 auto;
     margin-top: 40px;
     color: grey;
-    padding-left: 123px;
+    text-align: center;
+    padding: 0 10px;
     letter-spacing: 0.2px;
 }
 
 @media (max-width: 1200px) {
-
+    .header_item {
+        flex-basis: auto;
+        margin: 0 auto;
+    }
+    .header::after, .header::before {
+        content: '';
+    }
+    nav li + li::before {
+        content: '';
+        margin: 0 auto;
+    }
+    nav {
+        display: flex;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .nav ul li {
+        list-style-type: none;
+        flex-basis: 15%;
+        margin: 0;
+    }
+    .excursions_grid_item {
+        flex-basis: 49%;  
+    }
+    .item_info h2 + p::before {
+        content: '';
+    }
 }
-@media (max-width: 980px) {
+@media only screen and (max-width: 980px) {
+    .header {
+        margin: 89px auto 12px;
+    }
+    .header_item-logo {
+        position: absolute;
+        top: 0;
+    }
+    .excursions_grid_item {
+        flex-basis: 80%;
+    }
+    .item_image {
+        width: 84%;
+        margin: 0 auto;
+    }
+    .footer {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer_item {
+        flex-basis: 31%;
+    }
+    
+    .footer_item:last-child {
+        flex-basis: 84%;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    .footer_item + .footer_item::before {
+        content: '';
+    }
+}
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header_item {
+        flex-basis: 35%;
+        margin: 5px;
+    }
+    .excursions_grid_item {
+        flex-basis: 90%;
+    }
+    .item_image {
+        width: 100%;
+    }
+    .item_more {
+        margin: 0;
+    }
+    .footer_item-list {
+        margin-top: 22px;
+    }
+    .some .footer_item-list::before {
+        top: -31px;
+    }
+    .footer {
+        justify-content: space-around;
+    }
+    .footer_item {
+        flex-basis: 40%;
+        margin-top: 20px;
+        align-items: flex-start;
+    }
+    .footer_item:last-child {
+        flex-basis: 40%;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+}
+@media only screen and (max-width: 576px) {
+    .header_item {
+        flex-basis: 42%;
+        margin: 5px 5px;
+    }
+    .excursions h1::before, .excursions h1::after {
+        content: '';
+    }
+    .excursions_info {
+        max-width: 80%;
+    }
     
 }
-@media (max-width: 768px) {
-    
-}
-@media (max-width: 576px) {
-    
+@media only screen and (max-width: 480px) {
+    .header_item {
+        flex-basis: 80%;
+    }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .header_item {
+        align-items: center;
+    }
+    .item_info h2 {
+        margin-bottom: 10px;
+    }
+    .footer_item {
+        flex-basis: 41%;
+    }
 }
