@@ -388,7 +388,35 @@ footer {
     padding: 0 10px;
     letter-spacing: 0.2px;
 }
-
+.nav_button {
+    position: absolute;
+    display: none;
+}
+.menu {
+    background-color: #42373C;
+    position: absolute;
+    display: none;
+}
+.active-menu {
+    display: block;
+    z-index: 1;
+}
+.ul_menu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.ul_menu li {
+    padding: 5px;
+    font-family: 'Romul';
+    list-style-type: none;
+}
+.ul_menu li a {
+    color: #ffffff;
+}
+.ul_menu li a:hover {
+    color: #DEAC8C;
+}
 @media (max-width: 1200px) {
     .header_item {
         flex-basis: auto;
@@ -463,6 +491,15 @@ footer {
         flex-basis: 35%;
         margin: 5px;
     }
+    .nav_button {
+        display: block;
+        position: relative;
+        padding: 5px;
+    }
+    
+    nav {
+        display: none;
+    }
     .excursions_grid_item {
         flex-basis: 90%;
     }
@@ -524,3 +561,4 @@ footer {
         flex-basis: 41%;
     }
 }
+
