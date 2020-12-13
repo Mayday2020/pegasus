@@ -204,19 +204,19 @@ a:hover {
     background: center / 100% url(../image/image2.jpg) no-repeat;
 }
 .item_image-2 {
-    background: url(../image/image1.jpg) no-repeat left top / 103%;;
+    background: url(../image/image2.jpg) no-repeat left top / 103%;;
 }
 .item_image-3 {
-    background: url(../image/image4.jpg) no-repeat center / 115%;
+    background: url(../image/image2.jpg) no-repeat center / 115%;
 }
 .item_image-4 {
-    background: center / 100% url(../image/image3.jpg) no-repeat;
+    background: center / 100% url(../image/image2.jpg) no-repeat;
 }
 .item_image-5 {
-    background: url(../image/image5.jpg) no-repeat center;
+    background: url(../image/image2.jpg) no-repeat center;
 }
 .item_image-6 {
-    background: url(../image/image6.jpg) no-repeat bottom / 100%;
+    background: url(../image/image2.jpg) no-repeat bottom / 100%;
 }
 .item_info {
     margin-top: 21px;
